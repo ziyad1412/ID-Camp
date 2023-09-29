@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header id="home">
+      <div class="navbar" id="navbar">
+        <div class="container">
+          <div class="box-navbar">
+            <div class="logo">
+              <h1>Bookshelf Apps</h1>
+            </div>
+            <div class="search">
+              <form id="searchBook">
+                <input
+                  id="searchBookTitle"
+                  type="text"
+                  placeholder="Tulis Judul Buku"
+                />
+                <button id="searchSubmit" type="submit">Search</button>
+              </form>
+            </div>
+            <i class="fa-solid fa-bars menu-bar"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero -->
+
+      <div class="hero">
+        <div class="container">
+          <div class="box-hero">
+            <div class="box">
+              <h1>
+                Selamat Datang di <br />
+                Bookshelf Apps
+              </h1>
+              <p>
+                Tempat terbaik untuk membantu Anda agar bisa mengatur buku-buku
+                yang telah Anda baca dan yang masih dalam daftar bacaan Anda.
+              </p>
+
+              <a href="#book-shelf"><button>Rak Buku</button></a>
+            </div>
+            <aside class="box">
+              <img src="assets/img/book.svg" alt="Gambar Buku" />
+            </aside>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="form-book" id="form-book">
+        <div class="container">
+          <h1 class="section-title">Form Buku</h1>
+          <hr class="section-divider" />
+          <div class="box-hero">
+            <section class="input_section">
+              <!-- Form untuk menambahkan buku -->
+              <h2>Masukkan Buku Baru</h2>
+              <form id="inputBook">
+                <div class="input">
+                  <label for="inputBookTitle">Judul</label>
+                  <input id="inputBookTitle" type="text" required />
+                </div>
+                <div class="input">
+                  <label for="inputBookAuthor">Penulis</label>
+                  <input id="inputBookAuthor" type="text" required />
+                </div>
+                <div class="input">
+                  <label for="inputBookYear">Tahun</label>
+                  <input id="inputBookYear" type="number" required />
+                </div>
+                <div class="input_inline">
+                  <label for="inputBookIsComplete">Selesai dibaca</label>
+                  <input id="inputBookIsComplete" type="checkbox" />
+                </div>
+                <button id="bookSubmit" type="submit">
+                  Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+                </button>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="book-shelf" id="book-shelf">
+        <div class="container">
+          <h1 class="section-title">Rak Buku</h1>
+          <hr class="section-divider" />
+          <div class="box-hero">
+            <section class="book_shelves">
+              <section class="book_shelf book_shelf--left">
+                <h2>Belum selesai dibaca</h2>
+                <div id="incompleteBookshelfList" class="book_list">
+                  <!-- Daftar buku yang belum selesai dibaca akan ditampilkan di sini -->
+                </div>
+              </section>
+
+              <section class="book_shelf book_shelf--right">
+                <h2>Selesai dibaca</h2>
+                <div id="completeBookshelfList" class="book_list">
+                  <!-- Daftar buku yang sudah selesai dibaca akan ditampilkan di sini -->
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><b>Copyright by Abdurrahman Ziyad</b></footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
